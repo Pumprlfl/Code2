@@ -1,31 +1,29 @@
 "use strict";
-class Animal {
-    constructor(_type, _hunger, _sound) {
-        this.set(_type, _hunger, _sound);
+var Farm;
+(function (Farm) {
+    const animals = [];
+    const seeds = new Farm.Food("Seeds", 40);
+    const hay = new Farm.Food("Hay", 100);
+    const truffle = new Farm.Food("Truffle", 30);
+    const cow = new Farm.Animal("Cow", 20, "Mooo", hay);
+    const chicken = new Farm.Animal("Chicken", 5, "bokbok", seeds);
+    const turtle = new Farm.Animal("Turtle", 7, "meow", truffle);
+    const horse = new Farm.Animal("Horse", 25, "whier", hay);
+    const pig = new Farm.Animal("Pig", 15, "oink", truffle);
+    animals.push(cow);
+    animals.push(chicken);
+    animals.push(turtle);
+    animals.push(horse);
+    animals.push(pig);
+    let count = 0;
+    callAnimal();
+    function callAnimal() {
+        if (count <= animals.length) {
+            animals[count].eat();
+            animals[count].sing();
+            count++;
+            setTimeout(callAnimal, 5000);
+        }
     }
-    set(_type, _hunger, _sound) {
-        this.type = _type;
-        this.hunger = _hunger;
-        this.sound = _sound;
-    }
-}
-class Food {
-    constructor(_type, _amount) {
-        this.set(_type, _amount);
-    }
-    set(_type, _amount) {
-        this.type = _type;
-        this.amount = _amount;
-    }
-}
-const cow = new Animal("Cow", 20, "Mooo");
-const chicken = new Animal("Chicken", 5, "bokbok");
-const turtle = new Animal("Turtle", 7, "meow");
-const horse = new Animal("Horse", 25, "whier");
-const pig = new Animal("Pig", 15, "oink");
-const seeds = new Food("Seeds", 40);
-const hay = new Food("Hay", 100);
-const truffle = new Food("Truffle", 30);
-console.log(cow);
-console.log(truffle);
+})(Farm || (Farm = {}));
 //# sourceMappingURL=mcdonal.js.map
