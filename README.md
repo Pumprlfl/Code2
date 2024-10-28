@@ -14,7 +14,8 @@ what is it??
 
 https://jirkadelloro.github.io/EIA2-Inverted/L09_Classes/  
 put classes in seperate files with "export class ClassName"  
-classes to be used in the same program must use the same namespace  
+classes to be used in the same program must use the same namespace
+properties declared in constructor can be given _property? to only use them if needed  
 
 
 Oldmacdonald:
