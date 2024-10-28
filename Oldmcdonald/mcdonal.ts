@@ -23,7 +23,7 @@ namespace Farm {
 
 
     function callAnimal(): void {
-        if (count <= animals.length) {
+        if (count < animals.length) {
             animals[count].eat();
             animals[count].sing();
             count++;
