@@ -7,7 +7,6 @@ var asteroids;
                 this.position = _position;
             else
                 this.position = new asteroids.Vector(0, 0);
-            this.position = new asteroids.Vector(0, 0);
             this.velocity = new asteroids.Vector(0, 0);
             this.velocity.random(100, 200);
             this.type = Math.floor(Math.random() * 4);
