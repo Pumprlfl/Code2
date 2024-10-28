@@ -1,6 +1,6 @@
-namespace Task {
+namespace asteroids {
 
-    class Vector {
+    export class Vector {
         x: number = 0;
         y: number = 0;
 
@@ -24,7 +24,4 @@ namespace Task {
             this.y += _addend.y;
         }
     }
-    const v1: Vector = new Vector(2, 3);
-    v1.scale(2);
-    console.log(v1);
 }
