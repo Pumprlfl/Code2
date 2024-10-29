@@ -1,5 +1,10 @@
 Diary Code 2 Christian Bauer  
 
+General:
+
+for of loops, get the values of the Array  
+for in loops, get the key/index of the Array 
+
 Ballerburg:  
 
 Classes:  
