@@ -1,4 +1,4 @@
-namespace asteroids {
+namespace Asteroid {
 
     export class Vector {
         x: number = 0;

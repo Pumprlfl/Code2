@@ -1,4 +1,4 @@
-namespace asteroids {
+namespace Asteroid {
     export class Asteroid {
         position: Vector;
         velocity: Vector;
