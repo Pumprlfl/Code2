@@ -23,7 +23,43 @@ var Farm;
             const sound = document.getElementById("sound");
             sound.textContent = this.sound;
         }
+        doSpecialAction() { }
     }
     Farm.Animal = Animal;
+    class Cow extends Animal {
+        doSpecialAction() {
+            const special = document.getElementById("special");
+            special.textContent = ("gave Milk");
+        }
+    }
+    Farm.Cow = Cow;
+    class Chicken extends Animal {
+        doSpecialAction() {
+            const special = document.getElementById("special");
+            special.textContent = ("layed an egg");
+        }
+    }
+    Farm.Chicken = Chicken;
+    class Turtle extends Animal {
+        doSpecialAction() {
+            const special = document.getElementById("special");
+            special.textContent = ("escaped his human captivators");
+        }
+    }
+    Farm.Turtle = Turtle;
+    class Horse extends Animal {
+        doSpecialAction() {
+            const special = document.getElementById("special");
+            special.textContent = ("helped the turtle");
+        }
+    }
+    Farm.Horse = Horse;
+    class Pig extends Animal {
+        doSpecialAction() {
+            const special = document.getElementById("special");
+            special.textContent = ("consumed the remains left by the one rebeling");
+        }
+    }
+    Farm.Pig = Pig;
 })(Farm || (Farm = {}));
 //# sourceMappingURL=Animal.js.map

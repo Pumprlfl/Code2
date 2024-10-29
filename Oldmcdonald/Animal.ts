@@ -29,5 +29,42 @@ namespace Farm {
             const sound: HTMLSpanElement = document.getElementById("sound")!;
             sound.textContent = this.sound
         }
+        doSpecialAction(): void { }
     }
-}
+
+    export class Cow extends Animal {
+
+        doSpecialAction(): void {
+            const special: HTMLSpanElement = document.getElementById("special")!;
+            special.textContent = ("gave Milk");
+        }
+    }
+    export class Chicken extends Animal {
+
+        doSpecialAction(): void {
+            const special: HTMLSpanElement = document.getElementById("special")!;
+            special.textContent = ("layed an egg");
+        }
+    }
+    export class Turtle extends Animal {
+
+        doSpecialAction(): void {
+            const special: HTMLSpanElement = document.getElementById("special")!;
+            special.textContent = ("escaped his human captivators");
+        }
+    }
+    export class Horse extends Animal {
+
+        doSpecialAction(): void {
+            const special: HTMLSpanElement = document.getElementById("special")!;
+            special.textContent = ("helped the turtle");
+        }
+    }
+    export class Pig extends Animal {
+
+        doSpecialAction(): void {
+            const special: HTMLSpanElement = document.getElementById("special")!;
+            special.textContent = ("consumed the remains left by the one rebeling");
+        }
+    }
+} 
