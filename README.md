@@ -1,5 +1,19 @@
 Diary Code 2 Christian Bauer  
 
+principles of object oriented design: 
+
+Abstraktion:  
+breaking objects down into their relevant attributes and functions  
+
+Kappselung:  
+seperating objects from the main programm and making them do their own functionalities  
+
+Vererbung:  
+superclasses passing down all their attributes and methods down to their subclasses  
+
+Polymorphie:  
+
+
 General:
 
 for of loops, get the values of the Array  
