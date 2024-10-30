@@ -1,5 +1,19 @@
 Diary Code 2 Christian Bauer  
 
+principles of object oriented design: 
+
+Abstraktion:  
+breaking objects down into their relevant attributes and functions  
+
+Kappselung:  
+seperating objects from the main programm and making them do their own functionalities  
+
+Vererbung:  
+superclasses passing down all their attributes and methods down to their subclasses  
+
+Polymorphie:  
+
+
 General:
 
 for of loops, get the values of the Array  
@@ -34,7 +48,7 @@ properties declared in constructor can be given _property? to only use them if n
 null: represents absence of any object value and is treated as falsy(https://developer.mozilla.org/en-US/docs/Glossary/Falsy)
 
 Creating Subclasses:(https://www.basedash.com/blog/how-to-create-a-subclass-in-javascript) and (https://jirkadelloro.github.io/EIA2-Inverted/L10_Inheritance/)  
-
+use constructor when adding attributes in the subclass and utilise super in which you put in all the attributes previously used in the superclass and then add the new attribute with this.
 
 Oldmacdonald:
 
