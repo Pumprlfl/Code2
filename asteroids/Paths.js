@@ -1,7 +1,7 @@
 "use strict";
-var asteroids;
-(function (asteroids) {
-    asteroids.shapesAsteroids = [
+var Asteroid;
+(function (Asteroid) {
+    Asteroid.shapesAsteroids = [
         [
             [30, 1], [50, 15], [71, 1], [88, 31], [67, 40], [84, 63], [59, 93], [30, 79], [19, 87], [2, 63], [15, 43], [8, 20]
         ],
@@ -16,10 +16,10 @@ var asteroids;
         ]
     ];
     function createPaths() {
-        asteroids.asteroidPaths = createAsteroidPaths(asteroids.shapesAsteroids);
-        asteroids.ufoPath = createUfoPath();
+        Asteroid.asteroidPaths = createAsteroidPaths(Asteroid.shapesAsteroids);
+        Asteroid.ufoPath = createUfoPath();
     }
-    asteroids.createPaths = createPaths;
+    Asteroid.createPaths = createPaths;
     function createAsteroidPaths(_shapes) {
         let paths = [];
         for (let type of _shapes) {
@@ -58,5 +58,5 @@ var asteroids;
         path.closePath();
         return path;
     }
-})(asteroids || (asteroids = {}));
+})(Asteroid || (Asteroid = {}));
 //# sourceMappingURL=Paths.js.map

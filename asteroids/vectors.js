@@ -1,6 +1,6 @@
 "use strict";
-var asteroids;
-(function (asteroids) {
+var Asteroid;
+(function (Asteroid) {
     class Vector {
         constructor(_x, _y) {
             this.x = 0;
@@ -25,7 +25,10 @@ var asteroids;
             this.set(Math.cos(direction), Math.sin(direction));
             this.scale(length);
         }
+        copy() {
+            return new Vector(this.x, this.y);
+        }
     }
-    asteroids.Vector = Vector;
-})(asteroids || (asteroids = {}));
+    Asteroid.Vector = Vector;
+})(Asteroid || (Asteroid = {}));
 //# sourceMappingURL=vectors.js.map
