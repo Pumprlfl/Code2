@@ -23,11 +23,14 @@ classes to be used in the same program must use the same namespace
 properties declared in constructor can be given _property? to only use them if needed  
 null: represents absence of any object value and is treated as falsy(https://developer.mozilla.org/en-US/docs/Glossary/Falsy)
 
+Creating Subclasses:(https://www.basedash.com/blog/how-to-create-a-subclass-in-javascript) and (https://jirkadelloro.github.io/EIA2-Inverted/L10_Inheritance/)  
+
 
 Oldmacdonald:
 
 when counting through an array < not <=  
 when counting through an Array with < of for example 3 it counts 0, 1, 2 which are 3 numbers   
 when counting with <= it counts 0, 1, 2, 3 and prints an error message because there are only three objects in the array  
+call functions from subclasses in Superclass to utilise them when calling the Animals from the Array
 
 
