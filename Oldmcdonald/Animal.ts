@@ -67,4 +67,4 @@ namespace Farm {
             special.textContent = ("consumed the remains left by the one rebeling");
         }
     }
-} 
+}
