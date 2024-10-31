@@ -2,16 +2,17 @@ Diary Code 2 Christian Bauer
 
 principles of object oriented design: 
 
-Abstraktion:  
+Abstraktion (abstraction):  
 breaking objects down into their relevant attributes and functions  
 
-Kappselung:  
+Kappselung (encapsulation):  
 seperating objects from the main programm and making them do their own functionalities  
 
-Vererbung:  
+Vererbung (inheritance):  
 superclasses passing down all their attributes and methods down to their subclasses  
 
-Polymorphie:  
+Polymorphie (polymorphism):  
+
 
 
 General:
@@ -31,6 +32,10 @@ what does it know?(outside information)
 who holds it?  
 what is it??  
 
+Two commandments:
+
+every object is as dumb as it can be
+every object is as smart as it needs to be
 Things to consider when creating classes:  
 
 use one file per class and write export infront of the class in order for it to be used in other parts of the program  
@@ -38,6 +43,7 @@ name the files containing the classes the same as the class
 and refer to them in the html file (defer will work as well, use with all the scripts just to be safe)  
 consider the order in which the scripts are listed when refering the classes to each other  
 constructor:  
+
 
 
 
