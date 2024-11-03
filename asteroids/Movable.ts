@@ -30,7 +30,7 @@ namespace Asteroid {
         }
 
         draw(): void {
-            // console.log("affe")
+            // console.log("draw?")
         }
     }
 }
