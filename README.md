@@ -19,6 +19,8 @@ General:
 
 for of loops, get the values of the Array  
 for in loops, get the key/index of the Array 
+hetero Array when it keeps all kinds of data  
+homo when it keeps Data of the same type  
 
 Ballerburg:  
 
