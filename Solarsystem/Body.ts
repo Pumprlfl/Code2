@@ -7,6 +7,9 @@ namespace SolarSystem {
         orbitRadius: number;
         children: Body[];
 
+        path: Path2D = new Path2D;
+        absoluteRotation: number = 0;
+
         constructor(_data: Data) {
             const children: Body[] = [];
 
@@ -15,18 +18,15 @@ namespace SolarSystem {
             this.size = _data.size;
             this.velocity = _data.velocity;
             this.orbitRadius = _data.orbitRadius;
-            this.children = _data.children;
+            this.children = children;
         }
 
         addChild(_child: Body): void {
             this.children.push(_child);
         }
 
-        path: Path2D = new Path2D;
-        absoluteRotation: number = 0;
-
         update(_timeslice: number): void {
-            let relativeRotation: number = _timeslice * this.velocity;
+            const relativeRotation: number = _timeslice * this.velocity;
             this.absoluteRotation = this.absoluteRotation + relativeRotation;
 
             crc2.rotate(this.absoluteRotation * Math.PI / 180);
@@ -38,7 +38,7 @@ namespace SolarSystem {
             // crc2.closePath();
             crc2.fill(this.path);
 
-            for (let child of this.children) {
+            for (const child of this.children) {
                 crc2.save();
                 child.update(_timeslice);
                 crc2.restore();
@@ -53,7 +53,7 @@ namespace SolarSystem {
                 bodyName.textContent = this.name;
             }
 
-            for (let child of this.children) {
+            for (const child of this.children) {
                 if (crc2.isPointInPath(child.path, _mouseX, _mouseY)) {
                     bodyName.textContent = child.name;
                 }

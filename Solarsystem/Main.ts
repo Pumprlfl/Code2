@@ -1,34 +1,54 @@
 namespace SolarSystem {
-    const canvas: HTMLCanvasElement = document.querySelector("canvas")!;
-    export const crc2: CanvasRenderingContext2D = canvas.getContext("2d")!;
+    window.addEventListener("load", load)
 
-    const speedSlider: HTMLInputElement = <HTMLInputElement>document.getElementById("speedSlider");
-    speedSlider.addEventListener("input", hndSliderInput);
-    canvas.addEventListener("click", hndMouseInput);
-
+    let sun: Body;
+    let speedSlider: HTMLInputElement;
+    export let crc2: CanvasRenderingContext2D;
     let rotationSpeed: number = 1; //set initial rotation speed
 
-    crc2.translate(canvas.width / 2, canvas.height / 2); //translate coordinate system center to center of canvas
+    export interface Data {
+        name: string;
+        color: string;
+        size: number;
+        velocity: number;
+        orbitRadius: number;
+        children: Data[];
+    }
 
-    requestAnimationFrame(animate);
+    async function load(): Promise<void> {
+
+        const canvas: HTMLCanvasElement = document.querySelector("canvas")!;
+
+        speedSlider = <HTMLInputElement>document.getElementById("speedSlider");
+        speedSlider.addEventListener("input", hndSliderInput);
+        canvas.addEventListener("click", hndMouseInput);
+
+        crc2 = canvas.getContext("2d")!;
+        crc2.translate(canvas.width / 2, canvas.height / 2); //translate coordinate system center to center of canvas
+
+        const response: Response = await fetch("Data.json");
+        const data: Data = await response.json();
+
+        sun = createBody(data);
+
+        requestAnimationFrame(animate);
+    }
 
     function hndSliderInput(): void { //control rotation speed with slider input
         const value: number = Number(speedSlider.value) / 5; //divide slider value (0-100) for smoother input
         rotationSpeed = value;
     }
 
-    const sun: Body = createBody(data);
-
     function hndMouseInput(_event: MouseEvent): void {
-        let mouseX: number = _event.clientX;
-        let mouseY: number = _event.clientY;
+        const mouseX: number = _event.clientX;
+        const mouseY: number = _event.clientY;
         sun.showInfo(mouseX, mouseY);
     }
 
     function animate(): void {
-        crc2.clearRect(-canvas.width / 2, -canvas.height / 2, canvas.width, canvas.height);
+        crc2.clearRect(-crc2.canvas.width / 2, -crc2.canvas.height / 2, crc2.canvas.width, crc2.canvas.height);
         crc2.fillStyle = "black";
-        crc2.fillRect(-canvas.width / 2, -canvas.height / 2, canvas.width, canvas.height);
+        crc2.fillRect(-crc2.canvas.width / 2, -crc2.canvas.height / 2, crc2.canvas.width, crc2.canvas.height);
 
         sun.update(rotationSpeed);
         requestAnimationFrame(animate);
@@ -43,8 +63,6 @@ namespace SolarSystem {
         return body;
     }
 
-    const response: Response = await fetch("Data.json");
-    const jsondata: Data = await response.json();
 
 
 
