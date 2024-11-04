@@ -1,26 +1,46 @@
 "use strict";
-var Body;
-(function (Body_1) {
+var SolarSystem;
+(function (SolarSystem) {
     class Body {
-        constructor(_name, _size, _velocity, _orbitradius, _color, _children) {
+        constructor(_name, _color, _size, _velocity, _orbitRadius, _children) {
+            this.path = new Path2D;
+            this.absoluteRotation = 0;
             this.name = _name;
+            this.color = _color;
             this.size = _size;
             this.velocity = _velocity;
-            this.orbitradius = _orbitradius;
-            this.color = _color;
+            this.orbitRadius = _orbitRadius;
             this.children = _children;
         }
-        draw(_timeslice, _sunposx) {
-            Body_1.crc2.save();
-            Body_1.crc2.beginPath();
-            Body_1.crc2.rotate(this.velocity);
-            Body_1.crc2.translate(this.orbitradius, 0);
-            Body_1.crc2.arc(0, 0, this.size, 0, 2 * Math.PI);
-            Body_1.crc2.fillStyle = this.color;
-            Body_1.crc2.closePath();
-            Body_1.crc2.restore();
+        update(_timeslice) {
+            let relativeRotation = _timeslice * this.velocity;
+            this.absoluteRotation = this.absoluteRotation + relativeRotation;
+            SolarSystem.crc2.rotate(this.absoluteRotation * Math.PI / 180);
+            SolarSystem.crc2.translate(this.orbitRadius, 0);
+            SolarSystem.crc2.fillStyle = this.color;
+            // crc2.beginPath();
+            this.path.ellipse(0, 0, this.size, this.size, 0, 0, Math.PI * 2);
+            // crc2.closePath();
+            SolarSystem.crc2.fill(this.path);
+            for (let child of this.children) {
+                SolarSystem.crc2.save();
+                child.update(_timeslice);
+                SolarSystem.crc2.restore();
+            }
+            // console.log(this.absoluteRotation);
+        }
+        showInfo(_mouseX, _mouseY) {
+            const bodyName = document.getElementById("bodyName");
+            if (SolarSystem.crc2.isPointInPath(this.path, _mouseX, _mouseY)) {
+                bodyName.textContent = this.name;
+            }
+            for (let child of this.children) {
+                if (SolarSystem.crc2.isPointInPath(child.path, _mouseX, _mouseY)) {
+                    bodyName.textContent = child.name;
+                }
+            }
         }
     }
-    Body_1.Body = Body;
-})(Body || (Body = {}));
+    SolarSystem.Body = Body;
+})(SolarSystem || (SolarSystem = {}));
 //# sourceMappingURL=Body.js.map
