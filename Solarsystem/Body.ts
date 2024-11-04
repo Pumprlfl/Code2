@@ -7,13 +7,19 @@ namespace SolarSystem {
         orbitRadius: number;
         children: Body[];
 
-        constructor(_name: string, _color: string, _size: number, _velocity: number, _orbitRadius: number, _children: Body[]) {
-            this.name = _name;
-            this.color = _color;
-            this.size = _size;
-            this.velocity = _velocity;
-            this.orbitRadius = _orbitRadius;
-            this.children = _children;
+        constructor(_data: Data) {
+            const children: Body[] = [];
+
+            this.name = _data.name;
+            this.color = _data.color;
+            this.size = _data.size;
+            this.velocity = _data.velocity;
+            this.orbitRadius = _data.orbitRadius;
+            this.children = _data.children;
+        }
+
+        addChild(_child: Body): void {
+            this.children.push(_child);
         }
 
         path: Path2D = new Path2D;

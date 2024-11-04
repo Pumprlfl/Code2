@@ -2,15 +2,19 @@
 var SolarSystem;
 (function (SolarSystem) {
     class Body {
-        constructor(_name, _color, _size, _velocity, _orbitRadius, _children) {
+        constructor(_data) {
             this.path = new Path2D;
             this.absoluteRotation = 0;
-            this.name = _name;
-            this.color = _color;
-            this.size = _size;
-            this.velocity = _velocity;
-            this.orbitRadius = _orbitRadius;
-            this.children = _children;
+            const children = [];
+            this.name = _data.name;
+            this.color = _data.color;
+            this.size = _data.size;
+            this.velocity = _data.velocity;
+            this.orbitRadius = _data.orbitRadius;
+            this.children = _data.children;
+        }
+        addChild(_child) {
+            this.children.push(_child);
         }
         update(_timeslice) {
             let relativeRotation = _timeslice * this.velocity;

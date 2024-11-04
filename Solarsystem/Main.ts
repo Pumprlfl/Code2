@@ -17,13 +17,15 @@ namespace SolarSystem {
         rotationSpeed = value;
     }
 
+    const sun: Body = createBody(data);
+
     function hndMouseInput(_event: MouseEvent): void {
         let mouseX: number = _event.clientX;
         let mouseY: number = _event.clientY;
         sun.showInfo(mouseX, mouseY);
     }
 
-    function animate() {
+    function animate(): void {
         crc2.clearRect(-canvas.width / 2, -canvas.height / 2, canvas.width, canvas.height);
         crc2.fillStyle = "black";
         crc2.fillRect(-canvas.width / 2, -canvas.height / 2, canvas.width, canvas.height);
@@ -32,7 +34,21 @@ namespace SolarSystem {
         requestAnimationFrame(animate);
     }
 
-    let Planets: Body[] = []; //create arrays for bodies (planets and moons)
+    function createBody(_data: Data): Body {
+        const body: Body = new Body(_data);
+
+        for (const child of _data.children) {
+            body.addChild(createBody(child));
+        }
+        return body;
+    }
+
+    const response: Response = await fetch("Data.json");
+    const jsondata: Data = await response.json();
+
+
+
+    /*let Planets: Body[] = []; //create arrays for bodies (planets and moons)
 
     // let MercuryMoons: Body[] = [];
     // let VenusMoons: Body[] = [];
@@ -110,5 +126,5 @@ namespace SolarSystem {
     UranusMoons.push(uranusMoon5);
 
     let neptuneMoon: Body = new Body("Triton", "grey", 2, 0.3, 17, Empty);
-    NeptuneMoons.push(neptuneMoon);
+    NeptuneMoons.push(neptuneMoon);*/
 }
