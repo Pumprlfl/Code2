@@ -76,6 +76,10 @@ Camera an Object to be placed in 3D object
 WebGl only renders triangles  
 near and far plane define the space that is rendered this space is called frustum  
 Identity Matrix is the Matrix that does nothing 1000/0100/0010/0001  
-
-
+Node: joins components and builds parent child relationships
+Graph: builds a connection of nodes (structure)
+Branch: part of the Graph
+mtx: Matrix
+resource: 
+Coordinates: z is forward and back, y is up down, x is left right
 
