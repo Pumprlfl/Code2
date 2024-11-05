@@ -21,6 +21,10 @@ for of loops, get the values of the Array
 for in loops, get the key/index of the Array 
 hetero Array when it keeps all kinds of data  
 homo when it keeps Data of the same type  
+parse analyse a sequence of symbols and interpret them (Json.parse)
+Json.stringify turn something into a string  
+"!" means that the Object to be selected is definitly there, without checking for it  
+
 
 Ballerburg:  
 
@@ -64,6 +68,14 @@ when counting through an array < not <=
 when counting through an Array with < of for example 3 it counts 0, 1, 2 which are 3 numbers   
 when counting with <= it counts 0, 1, 2, 3 and prints an error message because there are only three objects in the array  
 call functions from subclasses in Superclass to utilise them when calling the Animals from the Array  
+
+Fudge:  
+
+Viewport a 2D Plane to display the Image  
+Camera an Object to be placed in 3D object  
+WebGl only renders triangles  
+near and far plane define the space that is rendered this space is called frustum  
+Identity Matrix is the Matrix that does nothing 1000/0100/0010/0001  
 
 
 
