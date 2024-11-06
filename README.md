@@ -84,5 +84,7 @@ Graph: builds a connection of nodes (structure)
 Branch: part of the Graph
 mtx: Matrix
 resource: Information to access 
-Coordinates: z is forward and back, y is up down, x is left right
+Coordinates: z is forward and back, y is up down, x is left right  
+mtxWorld: relative to the world
+mtxLocal: relative to parent
 
