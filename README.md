@@ -24,6 +24,9 @@ homo when it keeps Data of the same type
 parse analyse a sequence of symbols and interpret them (Json.parse)
 Json.stringify turn something into a string  
 "!" means that the Object to be selected is definitly there, without checking for it  
+"window." accesses the html file/website, "window.addeventlistener("load", functiontoexecuteafterloading)" waits for the window to load  
+variables declared in function cant be used outside of them they create their own namespace  
+
 
 
 Ballerburg:  
@@ -80,6 +83,6 @@ Node: joins components and builds parent child relationships
 Graph: builds a connection of nodes (structure)
 Branch: part of the Graph
 mtx: Matrix
-resource: 
+resource: Information to access 
 Coordinates: z is forward and back, y is up down, x is left right
 
