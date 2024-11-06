@@ -114,3 +114,26 @@ Coordinates: z is forward and back, y is up down, x is left right
 mtxWorld: relative to the world
 mtxLocal: relative to parent
 
+Programming patterns (refer to https://felix.hs-furtwangen.de/auth/RepositoryEntry/53903508/CourseNode/110701493389494):
+
+Flyweight: try to use as little Data as possible, so share Data as much as possible between objects and bury the Data in the Code so create seperate Dataobjects (and Files with the Data like .json(JavaScriptObjectNotation)) that you can access with your Code instead of implementing the Data straight into the Code  
+
+Observer: Ask about this? maybe it talks about parent child relations where changes that affect the parent also in reaction affect the child  
+
+Object Pool: have a fixed pool of objects that you can reuse in order to just call them and not everytime without creating a new one all the time, to save up on storage and processing effort
+
+Game Loop: seperate the progression of game time from the actual processing to avoid slowdowns, the Game Loop tracks the passage of Time, the Inputs of the player, updates the Gamestate and renders the game   
+-fixed: ask about this? maybe it gives every Frame that is supposed to be rendered a fixed amount of time causing slowdowns instead of framedrops  
+-variable: ask? the opposite of fixed where it asigns an action to take a fixed amount of time and the frames are drawn as is possible (framedrops)  
+
+Update Method: tell seperate objects to update/animate/simulate in their own way, maybe they need to run independantly in fixed or variable ways  
+
+Entity Component System: allow things to span multiple domains (function, Class, Namespace...) not by couplin (ask?) the domains but by refering directly to each other, the state of Entity or sending messages with the Entity(maybe declearing global variables is something like this?ask)
+
+Architecture,Performance,Games:  
+
+
+
+
+
+
