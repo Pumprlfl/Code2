@@ -24,11 +24,19 @@ homo when it keeps Data of the same type
 parse analyse a sequence of symbols and interpret them (Json.parse)
 Json.stringify turn something into a string  
 "!" means that the Object to be selected is definitly there, without checking for it  
+"window." accesses the html file/website, "window.addeventlistener("load", functiontoexecuteafterloading)" waits for the window to load  
+variables declared in function cant be used outside of them they create their own namespace  
+
 
 
 Ballerburg:  
 
 Classes:  
+
+abstract Classes:
+when a Class doesnt initialize any objects its an abtract class like Animal in oldmcdonald  
+abstract method is when you have to call a method from the subclass in the superclass but actually create it in the superclass  
+
 
 Questions to ask when creating a class:  
 
@@ -38,10 +46,11 @@ what does it know?(outside information)
 who holds it?  
 what is it??  
 
-Two commandments:
+Two commandments:  
 
-every object is as dumb as it can be
-every object is as smart as it needs to be
+every object is as dumb as it can be  
+every object is as smart as it needs to be  
+
 Things to consider when creating classes:  
 
 use one file per class and write export infront of the class in order for it to be used in other parts of the program  
@@ -76,6 +85,12 @@ Camera an Object to be placed in 3D object
 WebGl only renders triangles  
 near and far plane define the space that is rendered this space is called frustum  
 Identity Matrix is the Matrix that does nothing 1000/0100/0010/0001  
-
-
+Node: joins components and builds parent child relationships
+Graph: builds a connection of nodes (structure)
+Branch: part of the Graph
+mtx: Matrix
+resource: Information to access 
+Coordinates: z is forward and back, y is up down, x is left right  
+mtxWorld: relative to the world
+mtxLocal: relative to parent
 
