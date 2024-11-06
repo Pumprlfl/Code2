@@ -33,9 +33,29 @@ Ballerburg:
 
 Classes:  
 
+L11 Inverted classroom (refer to : https://jirkadelloro.github.io/EIA2-Inverted/L11_Advanced/)
+
 abstract Classes:
 when a Class doesnt initialize any objects its an abtract class like Animal in oldmcdonald  
-abstract method is when you have to call a method from the subclass in the superclass but actually create it in the superclass  
+abstract method is when you have to call a method from the subclass in the superclass but actually create it in the superclass(L11)  
+
+static:  
+is used when a method is not used when initializing an Object, for example when calculating something used in another method later on(L11)  
+
+public: everything can access this information(L11)  
+
+private: only the class that this is declared in can use this Information(L11)  
+
+protected: only this class and its subclasses can use this(L11)  
+
+readonly can be used in conjunction with the others and is basically an equivalent to const as it declares that this variable can only be read but not changed(L11)  
+
+with set you can access a private variable by creating a method (which you are able to access outside of the class) that changes that for example value(L11) 
+
+with get you can return the value of calculation, that you can later call as what seems to be a variable, but is actually a method that is called when you use it in other parts of your code(L11) 
+
+with enum you can create datatypes that only have a very limited amount of values they process and you can declare yourself, close to what boolean does which only processes true and false(L11)  
+
 
 
 Questions to ask when creating a class:  
