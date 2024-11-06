@@ -1,5 +1,5 @@
 namespace Farm {
-    export class Animal {
+    export abstract class Animal {
         name: string;
         hunger: number;
         sound: string;
