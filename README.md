@@ -12,6 +12,7 @@ Vererbung (inheritance):
 superclasses passing down all their attributes and methods down to their subclasses  
 
 Polymorphie (polymorphism):  
+one thing can take different forms, Subclasses can take the form of their Superclass when you for example put the subclasses in an Array of the of your superclass  
 
 
 
@@ -41,7 +42,9 @@ when a Class doesnt initialize any objects its an abtract class like Animal in o
 abstract method is when you have to call a method from the subclass in the superclass but actually create it in the superclass(L11)  
 
 static:  
-is used when a method is not used when initializing an Object, for example when calculating something used in another method later on(L11)(underline it in diagrams)  
+is used when a method is not used when initializing an Object, for example when calculating something used in another method later on  
+a static is always called when creating an instance of that class it lives within the class and not within the Instance, for example when the size is supposed to always be the same,   
+this saves memory because this doesnt have to be saved in the instance but is saved in the class(L11)(underline it in diagrams)  
 
 public: everything can access this information(L11)(write + in diagrams)  
 
@@ -64,13 +67,13 @@ Questions to ask when creating a class:
 what does it have?(attributes)  
 what can it do?(methods)  
 what does it know?(outside information)  
-who holds it?  
-what is it??  
+who holds it?(the variable you use to instance it "let...")  
+what is it?(Type of)  
 
 Two commandments:  
 
 every object is as dumb as it can be  
-every object is as smart as it needs to be  
+every object is as smart as it needs to be(as much functionality as it needs to have to fulfill the task)  
 
 Things to consider when creating classes:  
 
