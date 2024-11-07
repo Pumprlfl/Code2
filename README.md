@@ -113,7 +113,8 @@ mtx: Matrix
 resource: Information to access 
 Coordinates: z is forward and back, y is up down, x is left right  
 mtxWorld: relative to the world
-mtxLocal: relative to parent
+mtxLocal: relative to parent  
+when new info is created it is writte in upppercase
 
 Programming patterns (refer to https://felix.hs-furtwangen.de/auth/RepositoryEntry/53903508/CourseNode/110701493389494):
 
@@ -121,7 +122,8 @@ Flyweight: try to use as little Data as possible, so share Data as much as possi
 
 Observer: Ask about this? maybe it talks about parent child relations where changes that affect the parent also in reaction affect the child  
 
-Object Pool: have a fixed pool of objects that you can reuse in order to just call them and not everytime without creating a new one all the time, to save up on storage and processing effort
+Object Pool: have a fixed pool of objects that you can reuse in order to just call them and not everytime without creating a new one all the time, to save up on storage and processing effort  
+creating and deleting objects takes time, so reuse created objects to reduce load on the memory so that no new object has to be created and take up memory  
 
 Game Loop: seperate the progression of game time from the actual processing to avoid slowdowns, the Game Loop tracks the passage of Time, the Inputs of the player, updates the Gamestate and renders the game   
 -fixed: ask about this? maybe it gives every Frame that is supposed to be rendered a fixed amount of time causing slowdowns instead of framedrops  
