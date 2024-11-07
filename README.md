@@ -41,7 +41,7 @@ when a Class doesnt initialize any objects its an abtract class like Animal in o
 abstract method is when you have to call a method from the subclass in the superclass but actually create it in the superclass(L11)  
 
 static:  
-is used when a method is not used when initializing an Object, for example when calculating something used in another method later on(L11)  
+is used when a method is not used when initializing an Object, for example when calculating something used in another method later on(L11)(underline it in diagrams)  
 
 public: everything can access this information(L11)(write + in diagrams)  
 
