@@ -43,11 +43,11 @@ abstract method is when you have to call a method from the subclass in the super
 static:  
 is used when a method is not used when initializing an Object, for example when calculating something used in another method later on(L11)  
 
-public: everything can access this information(L11)  
+public: everything can access this information(L11)(write + in diagrams)  
 
-private: only the class that this is declared in can use this Information(L11)  
+private: only the class that this is declared in can use this Information(L11)(write - in diagrams)  
 
-protected: only this class and its subclasses can use this(L11)  
+protected: only this class and its subclasses can use this(L11)(write # in diagrmas)  
 
 readonly can be used in conjunction with the others and is basically an equivalent to const as it declares that this variable can only be read but not changed(L11)  
 
