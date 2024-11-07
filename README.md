@@ -26,6 +26,7 @@ Json.stringify turn something into a string
 "!" means that the Object to be selected is definitly there, without checking for it  
 "window." accesses the html file/website, "window.addeventlistener("load", functiontoexecuteafterloading)" waits for the window to load  
 variables declared in function cant be used outside of them they create their own namespace  
+pop takes something out of an array for example  
 
 
 
