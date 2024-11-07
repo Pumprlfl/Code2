@@ -107,7 +107,10 @@ namespace Firstfudge {
         if (f.Keyboard.isPressedOne([f.KEYBOARD_CODE.Q]))
             node.mtxLocal.rotateY(-rSpeed * frameTimeInSeconds);
 
+        const up: f.Vector3 = f.Vector3.Y();
         viewport.camera.mtxPivot.lookAt(node.mtxWorld.translation, f.Vector3.Y());
+        f.Recycler.store(up);
+        
         viewport.draw();
 
 
