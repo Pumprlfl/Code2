@@ -28,12 +28,14 @@ Json.stringify turn something into a string
 "window." accesses the html file/website, "window.addeventlistener("load", functiontoexecuteafterloading)" waits for the window to load  
 variables declared in function cant be used outside of them they create their own namespace  
 pop takes something out of an array for example  
+a scope is what is inside of {}   
+this.... means that it refers to the variable in this class  
+_ is to be used as a variable within the function to avoid mistakes  
 
-
-
-Ballerburg:  
 
 Classes:  
+
+new ... creates a new Instance of a class  
 
 L11 Inverted classroom (refer to : https://jirkadelloro.github.io/EIA2-Inverted/L11_Advanced/)
 
@@ -42,7 +44,7 @@ when a Class doesnt initialize any objects its an abtract class like Animal in o
 abstract method is when you have to call a method from the subclass in the superclass but actually create it in the superclass(L11)  
 
 static:  
-is used when a method is not used when initializing an Object, for example when calculating something used in another method later on  
+it is somthing that lives in the class and not within the instance of the class  
 a static is always called when creating an instance of that class it lives within the class and not within the Instance, for example when the size is supposed to always be the same,   
 this saves memory because this doesnt have to be saved in the instance but is saved in the class(L11)(underline it in diagrams)  
 
@@ -56,7 +58,9 @@ readonly can be used in conjunction with the others and is basically an equivale
 
 with set you can access a private variable by creating a method (which you are able to access outside of the class) that changes that for example value(L11) 
 
-with get you can return the value of calculation, that you can later call as what seems to be a variable, but is actually a method that is called when you use it in other parts of your code(L11) 
+with get you can return the value of calculation, that you can later call as what seems to be a variable, but is actually a method that is called when you use it in other parts of your code(L11)  
+
+with get and set 
 
 with enum you can create datatypes that only have a very limited amount of values they process and you can declare yourself, close to what boolean does which only processes true and false(L11)  
 
