@@ -1,4 +1,4 @@
-Diary Code 2 Christian Bauer  
+ Diary Code 2 Christian Bauer  
 
 principles of object oriented design: 
 
@@ -127,19 +127,19 @@ Programming patterns (refer to https://felix.hs-furtwangen.de/auth/RepositoryEnt
 
 Flyweight: try to use as little Data as possible, so share Data as much as possible between objects and bury the Data in the Code so create seperate Dataobjects (and Files with the Data like .json(JavaScriptObjectNotation)) that you can access with your Code instead of implementing the Data straight into the Code  
 
-Observer: Ask about this? maybe it talks about parent child relations where changes that affect the parent also in reaction affect the child  
+Observer: Eventlisteners are Observers that look for changes in the code in general, they dont have to be connected for them to be called by something specific  
 
 Object Pool: have a fixed pool of objects that you can reuse in order to just call them and not everytime without creating a new one all the time, to save up on storage and processing effort  
 creating and deleting objects takes time, so reuse created objects to reduce load on the memory so that no new object has to be created and take up memory  
+because freeing up the space in the memory and allocating the memory when creating new ones takes too much time  
 
 Game Loop: seperate the progression of game time from the actual processing to avoid slowdowns, the Game Loop tracks the passage of Time, the Inputs of the player, updates the Gamestate and renders the game   
--fixed: ask about this? maybe it gives every Frame that is supposed to be rendered a fixed amount of time causing slowdowns instead of framedrops  
--variable: ask? the opposite of fixed where it asigns an action to take a fixed amount of time and the frames are drawn as is possible (framedrops)  
+-fixed: maybe it gives every Frame that is supposed to be rendered a fixed amount of time causing slowdowns instead of framedrops  
+-variable: the opposite of fixed where it asigns an action to take a fixed amount of time and the frames are drawn as is possible (framedrops)  
 
 Update Method: tell seperate objects to update/animate/simulate in their own way, maybe they need to run independantly in fixed or variable ways  
 
-Entity Component System: allow things to span multiple domains (function, Class, Namespace...) not by couplin (ask?) the domains but by refering directly to each other, the state of Entity or sending messages with the Entity(maybe declearing global variables is something like this?ask)
-
+Entity Component System: Entities (Node) can do nothing on their own, but they have components that they consist of that actually do things that the Entity consists of
 Architecture,Performance,Games:  
 
 
