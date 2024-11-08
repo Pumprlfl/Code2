@@ -9,7 +9,7 @@ Kappselung (encapsulation):
 seperating objects from the main programm and making them do their own functionalities  
 
 Vererbung (inheritance):  
-superclasses passing down all their attributes and methods down to their subclasses  
+superclasses passing down all their attributes and methods down to their subclasses all subclasses are of the type of the   
 
 Polymorphie (polymorphism):  
 one thing can take different forms, Subclasses can take the form of their Superclass when you for example put the subclasses in an Array of the of your superclass  
@@ -71,8 +71,8 @@ Questions to ask when creating a class:
 what does it have?(attributes)  
 what can it do?(methods)  
 what does it know?(outside information)  
-who holds it?(the variable you use to instance it "let...")  
-what is it?(Type of)  
+who holds it?(the variable you use to instance it "let...", or Array)  
+what is it?(what the superclass of the subclasses is)  
 
 Two commandments:  
 
